@@ -1,0 +1,9 @@
+package Aufgabe131;
+import grafischeOberflächeStandardKlassenWICHTIG;
+
+public class ZweiFrames {
+
+    public static void main(String[] args) {
+        
+    }
+}

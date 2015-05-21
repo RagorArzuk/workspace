@@ -1,0 +1,32 @@
+package Aufgaben13;
+
+import java.awt.FlowLayout;
+import java.io.*;
+import java.util.Scanner;
+
+import grafischeOberflächeStandardKlassenWICHTIG.*;
+
+public class TextFrame {
+    
+    public static void main(String[] args) {
+
+        try {
+            Scanner in = new Scanner(System.in);
+            FrameSwing fenster = FrameSwing.erzeugeFrameSwing();
+            
+            
+            int width = in.nextInt();
+            int height = in.nextInt();
+            
+            fenster.setSize(width, height);
+            
+            fenster.setVisible(true);
+            in.close();
+        } catch(NumberFormatException e) {
+            System.out.println("Keine ganzen Zahlen!");
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Zu wenig Eingaben!");
+        }
+        
+    }
+}

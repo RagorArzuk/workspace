@@ -1,0 +1,20 @@
+package Aufgaben13;
+
+import java.util.Scanner;
+
+public class ScannerKlasse {
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String txt;
+        
+        do {
+            System.out.print("Bitte Eingabe: ");
+            txt=in.nextLine();
+            System.out.println("Ihre Eingabe: " + txt);
+        }while (!txt.equals("quit"));
+        System.out.println("Das Programm wurde beendet!");
+        in.close();
+    }
+
+}

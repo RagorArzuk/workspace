@@ -1,0 +1,16 @@
+package grafischeOberfläche;
+import javax.swing.*;
+
+public class FrameSwing {
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Swing Frame");
+        
+        frame.setSize(300, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        JButton b1= new JButton("Quit");
+        frame.add(b1);
+            frame.setVisible(true);
+    }
+}

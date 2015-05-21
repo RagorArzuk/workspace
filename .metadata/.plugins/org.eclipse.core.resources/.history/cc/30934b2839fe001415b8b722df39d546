@@ -1,0 +1,23 @@
+package grafischeOberfläche;
+
+import java.awt.*;
+import java.awt.event.ActionListener;
+
+public class FrameOhneInhalt {
+
+    public static void main(String[] args) {
+        
+        Frame frame = new Frame();
+        frame.setTitle("Erstes Frame");
+        frame.setSize(300, 300);
+        
+        Button b1 = new Button("Quit") {
+            public void performAction(ActionListener e) {
+                System.exit(0);
+            }
+        };
+        
+        frame.add(b1);
+        frame.setVisible(true);
+    }
+}

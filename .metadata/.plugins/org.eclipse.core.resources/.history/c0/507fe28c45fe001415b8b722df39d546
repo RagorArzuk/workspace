@@ -1,0 +1,33 @@
+package Aufgabe131;
+import java.awt.FlowLayout;
+import java.io.*;
+
+import grafischeOberflächeStandardKlassenWICHTIG.*;
+
+public class ZweiFrames {
+
+    public static void main(String[] args) {
+        FrameSwing fenster = FrameSwing.erzeugeFrameSwing("Das erste Fenster", 400, 250, new FlowLayout());
+        
+        fenster.setVisible(true);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        try {
+            System.out.println("Neuer Fenstertitel: ");
+            fenster.setTitle(br.readLine());
+            
+            System.out.println("Neue Fenster-Breite: ");
+            int width = br.read();
+            System.out.println("Neue Fenster-Höhe: ");
+            int height = br.read();
+            fenster.setSize(500 , 500);
+            
+            
+            br.close();
+        } catch(IOException e) {
+            System.out.println("Something's worng.");
+        }
+        
+        
+    }
+}

@@ -1,0 +1,14 @@
+package grafischeOberfläche;
+
+import java.awt.*;
+
+public class FrameOhneInhalt {
+
+    public static void main(String[] args) {
+        
+        Frame frame = new Frame();
+        frame.setTitle("Erstes Frame");
+        frame.setSize(300, 300);
+        frame.setVisible(true);
+    }
+}

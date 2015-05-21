@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/Users/Waldemar/Documents/Development/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1258140012.index
+2940921917.index
+4012050997.index
+2693248476.index
+1795196162.index
+1106500229.index

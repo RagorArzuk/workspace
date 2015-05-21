@@ -1,0 +1,17 @@
+package Aufgaben13;
+
+import java.util.Scanner;
+
+public class test {
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        do {
+            System.out.println("Bitte Eingabe: ");
+            System.out.println(in.nextLine());
+        }while (!in.nextLine().equals("quit"));
+        in.close();
+    }
+
+}

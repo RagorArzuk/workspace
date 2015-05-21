@@ -1,0 +1,62 @@
+package StaticVariablen;
+
+// Hier wird der Aufruf von Static Variablen geprobt.
+// Die Funktion soll sein: Jeder Kunde bekommt eine eigene Kundennummer, die dem Kunden nach Erzeugung
+// des Kunden automatisch zugewiesen und dann inkrementiert wird.
+
+public class Kunde {
+    
+    private static int kundennr = 0;
+    private int persönlicheKundennr;
+    private String name;
+    
+    public Kunde() {}
+    
+//  static Methoden um die Kundennummer auszugeben und zu inkrementieren.  
+    private static int getKundennr() {
+        return kundennr;
+    }
+    public static void incKundennr() {
+        kundennr = kundennr+1;
+    }
+    
+//    Getter und Setter für name;
+    private void setName(String name) {
+        this.name=name;
+    }
+    private String getName() {
+        return name;
+    }
+    
+//    Getter und Setter für die persönliche Kundennummer.
+    private void setPersönlicheKundennr(int nr) {
+        persönlicheKundennr = nr;
+    }
+    private int getPersönlicheKundennr() {
+        return persönlicheKundennr;
+    }
+    
+//    Ausgabe der Kundendaten.
+    public void printKunde() {
+        System.out.println("Der Kunde mit der persönlichen Kundennummer " + this.getPersönlicheKundennr() + "trägt den Namen " 
+                + this.getName() + " und die Anzahl der Kundennummer beträgt nun " + getKundennr());
+    }
+    
+    
+    public static Kunde erzeugeKunde(String name) {
+        Kunde kunde = new Kunde();
+        kunde.setName(name);
+        kunde.setPersönlicheKundennr(getKundennr());
+        incKundennr();
+        
+        return kunde;
+    }
+    
+    public static void main(String[] args) {
+        Kunde kunde1 = Kunde.erzeugeKunde("Waldemar Gareis");
+        Kunde kunde2 = Kunde.erzeugeKunde("Natalija Egel");
+        
+        kunde1.printKunde();
+        kunde2.printKunde();
+    }
+}

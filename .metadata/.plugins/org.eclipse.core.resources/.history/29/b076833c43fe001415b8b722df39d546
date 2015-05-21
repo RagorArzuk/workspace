@@ -1,0 +1,52 @@
+package grafischeOberflächeStandardKlassenWICHTIG;
+import java.awt.*;
+import java.io.*;
+import java.util.Scanner;
+
+import javax.swing.*;
+
+public class FrameSwing extends JFrame {
+    
+    public FrameSwing() {}
+    
+    static FrameSwing erzeugeFrameSwing(String title, int width, int height, LayoutManager lm) {
+        FrameSwing frame = new FrameSwing();
+        frame.setTitle(title);
+        frame.setSize(width, height);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(lm);
+        
+        return frame;
+    }
+
+    public static void main(String[] args) {
+
+        FrameSwing frame = FrameSwing.erzeugeFrameSwing("Hello, World!", 300, 300, new FlowLayout());
+        JButton b1= new JButton("Quit");
+        frame.add(new JLabel("Label-Text im Frame"));
+        frame.add(b1);
+        
+        frame.setVisible(true);
+        
+//        Scanner in = new Scanner(System.in);
+//        
+//        int i;
+//        System.out.println("i = ");
+//        i = in.nextInt();
+//        if (i==1)
+//            System.out.println("i ist gleich = " + i);
+//        
+//        String str;
+//        
+//        in.close();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        try {
+            String str = br.readLine();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
+}

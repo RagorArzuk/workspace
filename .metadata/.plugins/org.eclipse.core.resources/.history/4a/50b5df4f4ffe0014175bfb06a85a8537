@@ -1,0 +1,39 @@
+package Scanner;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class ScannerKlasse {
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String txt;
+        
+//        String-Eingabe:
+        do {
+            System.out.print("Bitte Eingabe: ");
+            txt=in.nextLine();
+            System.out.println("Ihre Eingabe: " + txt);
+        }while (!txt.equals("quit"));
+        System.out.println("Das Programm wurde beendet!");
+        in.close();
+        
+//        Integer-Eingabe:
+        Scanner in2 = new Scanner(System.in);
+        boolean schleifenAbruch=false;
+        
+        do {
+            try {
+                System.out.print("Bitte einen Integer eingeben: ");
+                int i = in2.nextInt();
+                System.out.println("Ihre Eingabe: " + i);                
+            }catch(InputMismatchException e) {
+                System.out.println("Es wurde kein Integer eingegeben!");
+                schleifenAbruch=true;
+            }
+        } while(!schleifenAbruch);
+        in2.close();
+        System.out.println("Programm wurde beendet!");
+    }
+
+}
